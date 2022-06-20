@@ -1,0 +1,2 @@
+class PerguntasAssessjur < ApplicationRecord
+end

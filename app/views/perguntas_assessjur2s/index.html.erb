@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perguntas Assessjur2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Duvida</th>
+      <th>Tel</th>
+      <th>Email</th>
+      <th>Tp duvida</th>
+      <th>Status</th>
+      <th>Numatd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perguntas_assessjur2s.each do |perguntas_assessjur2| %>
+      <tr>
+        <td><%= perguntas_assessjur2.duvida %></td>
+        <td><%= perguntas_assessjur2.tel %></td>
+        <td><%= perguntas_assessjur2.email %></td>
+        <td><%= perguntas_assessjur2.tp_duvida %></td>
+        <td><%= perguntas_assessjur2.status %></td>
+        <td><%= perguntas_assessjur2.numatd %></td>
+        <td><%= link_to 'Show', perguntas_assessjur2 %></td>
+        <td><%= link_to 'Edit', edit_perguntas_assessjur2_path(perguntas_assessjur2) %></td>
+        <td><%= link_to 'Destroy', perguntas_assessjur2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perguntas Assessjur2', new_perguntas_assessjur2_path %>

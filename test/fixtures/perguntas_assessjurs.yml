@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duvida: MyText
+  tel: MyString
+  email: MyString
+  tp_duvida: MyString
+  status: MyString
+  numatd: MyString
+
+two:
+  duvida: MyText
+  tel: MyString
+  email: MyString
+  tp_duvida: MyString
+  status: MyString
+  numatd: MyString

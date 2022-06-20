@@ -1,0 +1,52 @@
+<%= form_with(model: perguntas_assessjur) do |form| %>
+  <% if perguntas_assessjur.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(perguntas_assessjur.errors.count, "error") %> prohibited this perguntas_assessjur from being saved:</h2>
+
+      <ul>
+        <% perguntas_assessjur.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :duvida %>
+    <%= form.text_area :duvida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tel %>
+    <%= form.text_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tp_duvida %>
+    <%= form.text_field :tp_duvida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numatd %>
+    <% if @criar %>
+      <%= form.text_field :numatd, value:"#{gerarNumAtd(@count, @pjur)}"%>
+    <% else %>
+      <%= form.text_field :numatd %>
+    <% end %>
+  </div>
+  <%= @s %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
